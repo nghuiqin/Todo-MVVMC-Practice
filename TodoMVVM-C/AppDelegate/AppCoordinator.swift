@@ -7,11 +7,11 @@
 
 import UIKit
 
-class AppCoordinator: Coordinator<UINavigationController> {
+class AppCoordinator: Coordinator<UITabBarController> {
     private let dependency = AppDependency()
 
     override func start() {
-        let rootViewCoordinator = KanbanCoordinator(viewController: rootViewController)
+        let rootViewCoordinator = RootTabBarCoordinator(viewController: rootViewController)
         rootViewCoordinator.appDependency = dependency
         startChild(coordinator: rootViewCoordinator)
         super.start()

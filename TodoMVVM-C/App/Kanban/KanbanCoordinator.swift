@@ -11,14 +11,6 @@ class KanbanCoordinator: Coordinator<UINavigationController>, CoordinatorDepende
     var appDependency: AppDependency?
     private (set) var viewController: KanbanViewController!
     private (set) var viewModel: KanbanViewModel!
-    private var navigationDelegateProxy: NavigationDelegateProxy
-
-    required init(viewController: UINavigationController) {
-        navigationDelegateProxy = NavigationDelegateProxy()
-        viewController.interactivePopGestureRecognizer?.delegate = navigationDelegateProxy
-        viewController.delegate = navigationDelegateProxy
-        super.init(viewController: viewController)
-    }
 
     override func start() {
         if let manager = appDependency?.dataManager, !started {

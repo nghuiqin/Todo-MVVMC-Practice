@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private (set) var appCoordinator: AppCoordinator!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        appCoordinator = AppCoordinator(viewController: UINavigationController())
+        appCoordinator = AppCoordinator(viewController: UITabBarController())
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = appCoordinator.rootViewController
         window?.makeKeyAndVisible()

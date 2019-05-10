@@ -24,6 +24,9 @@
 		3798A72922851BC100158929 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3798A72522851BC100158929 /* Task+CoreDataClass.swift */; };
 		3798A72A22851BC100158929 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3798A72622851BC100158929 /* Task+CoreDataProperties.swift */; };
 		3798A72E2285214000158929 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3798A72D2285214000158929 /* TaskTableViewCell.swift */; };
+		3798A731228560BA00158929 /* RootTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3798A730228560BA00158929 /* RootTabBarCoordinator.swift */; };
+		3798A73422857F6A00158929 /* TodoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3798A73322857F6A00158929 /* TodoCoordinator.swift */; };
+		3798A7362285875500158929 /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3798A7352285875500158929 /* TodoViewController.swift */; };
 		37FDBEAE2281959900521C11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FDBEAD2281959900521C11 /* AppDelegate.swift */; };
 		37FDBEB52281959B00521C11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37FDBEB42281959B00521C11 /* Assets.xcassets */; };
 		37FDBEB82281959B00521C11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FDBEB62281959B00521C11 /* LaunchScreen.storyboard */; };
@@ -70,6 +73,9 @@
 		3798A72522851BC100158929 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3798A72622851BC100158929 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3798A72D2285214000158929 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		3798A730228560BA00158929 /* RootTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarCoordinator.swift; sourceTree = "<group>"; };
+		3798A73322857F6A00158929 /* TodoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCoordinator.swift; sourceTree = "<group>"; };
+		3798A7352285875500158929 /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
 		37FDBEAA2281959900521C11 /* TodoMVVM-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TodoMVVM-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FDBEAD2281959900521C11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37FDBEB42281959B00521C11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -138,6 +144,23 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		3798A72F2285609400158929 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				3798A730228560BA00158929 /* RootTabBarCoordinator.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		3798A73222857DE000158929 /* Todo */ = {
+			isa = PBXGroup;
+			children = (
+				3798A73322857F6A00158929 /* TodoCoordinator.swift */,
+				3798A7352285875500158929 /* TodoViewController.swift */,
+			);
+			path = Todo;
+			sourceTree = "<group>";
+		};
 		37FDBEA12281959900521C11 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +188,7 @@
 			children = (
 				37FDBEE32283C8B400521C11 /* App */,
 				37FDBEE22283C8A200521C11 /* AppDelegate */,
+				3798A72F2285609400158929 /* Tab */,
 				37FDBEB42281959B00521C11 /* Assets.xcassets */,
 				37FDBEB62281959B00521C11 /* LaunchScreen.storyboard */,
 				37FDBEB92281959B00521C11 /* Info.plist */,
@@ -213,6 +237,7 @@
 		37FDBEE32283C8B400521C11 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				3798A73222857DE000158929 /* Todo */,
 				37FDBEE52283C8FE00521C11 /* Kanban */,
 				3785ED932283D08600C76EDF /* Manager */,
 				37FDBEE42283C8F600521C11 /* Model */,
@@ -384,6 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3798A73422857F6A00158929 /* TodoCoordinator.swift in Sources */,
 				3798A72722851BC100158929 /* Board+CoreDataClass.swift in Sources */,
 				37FDBEED2283CA6800521C11 /* KanbanViewController.swift in Sources */,
 				3785ED902283CFD500C76EDF /* TextEditorCoordinator.swift in Sources */,
@@ -399,9 +425,11 @@
 				3785ED9B22841F5700C76EDF /* Coordinating.swift in Sources */,
 				3785ED952283D0A800C76EDF /* TodoManager.swift in Sources */,
 				3798A72E2285214000158929 /* TaskTableViewCell.swift in Sources */,
+				3798A7362285875500158929 /* TodoViewController.swift in Sources */,
 				3785ED9922841F5700C76EDF /* NavigationDelegateProxy.swift in Sources */,
 				37FDBEEF2283CA7C00521C11 /* AppCoordinator.swift in Sources */,
 				3785ED8E2283CFCC00C76EDF /* TextEditorViewModel.swift in Sources */,
+				3798A731228560BA00158929 /* RootTabBarCoordinator.swift in Sources */,
 				37FDBEAE2281959900521C11 /* AppDelegate.swift in Sources */,
 				3785ED842283CDF700C76EDF /* KanbanViewModel.swift in Sources */,
 				3798A71222843D0900158929 /* TodoMVVM-C.xcdatamodeld in Sources */,
