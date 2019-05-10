@@ -7,13 +7,7 @@
 
 import Foundation
 
-protocol BoardViewModelOutput: class {
-    var name: String? { get }
-    func numberOfTasks() -> Int
-    func task(at index: Int) -> Task?
-}
-
-class BoardViewModel: BoardViewModelOutput {
+class BoardViewModel {
     let board: Board
 
     init(board: Board) {
